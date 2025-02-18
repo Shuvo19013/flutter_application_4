@@ -1,34 +1,95 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Lab5());
+  runApp(DiscountApp());
 }
 
-class Lab5 extends StatelessWidget {
-  const Lab5({super.key});
-
+class DiscountApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Basic Flutter UI-02"),
-          backgroundColor: const Color.fromARGB(255, 168, 172, 170),
+          title: Text("Lab 05 - Flutter"),
           centerTitle: true,
+          backgroundColor: Colors.grey[700],
         ),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: SizedBox(
-            height: 800,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: List.generate(
-                  100,
-                  (index) => Icon(Icons.alarm,
-                      size: index.toDouble(),
-                      color: const Color.fromARGB(255, 131, 64, 255))),
-            ),
+        body: Container(
+          padding: const EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(15.0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                blurRadius: 5,
+                spreadRadius: 2,
+                offset: Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, // Align left
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "50% OFF",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
+                  ),
+                  Icon(
+                    Icons.card_giftcard,
+                    color: Color.fromARGB(255, 239, 227, 210),
+                    size: 28,
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+              Center(
+                child: Container(
+                  height: 150,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage("assets/shoes.webp"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              Text(
+                "Nike Air Shoes",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 5),
+              Row(
+                children: [
+                  Text(
+                    "\$400",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green,
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    "\$500",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
