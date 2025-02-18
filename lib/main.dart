@@ -16,12 +16,19 @@ class Lab5 extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 36, 132, 210),
           centerTitle: true,
         ),
-        body: Text("Basic Flutter UI-02"),
-        
-        
+        body: Row(
+          children: [
+            Text(
+              "Hi,",
+              style: TextStyle(color: Colors.red),
+            ),
+            Text(
+              "This is Flutter",
+              style: TextStyle(color: Colors.blue),
+            ),
+          ],
+        ),
       ),
-
-
     );
   }
 }
