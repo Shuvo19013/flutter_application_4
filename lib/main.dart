@@ -18,13 +18,21 @@ class Lab5 extends StatelessWidget {
         ),
         body: Row(
           children: [
+            Icon(
+              Icons.ac_unit,
+              size: 40,
+              color: Colors.amber,
+
+            ),
             Text(
               "Hi,",
               style: TextStyle(color: Colors.red),
+            
             ),
             Text(
               "This is Flutter",
               style: TextStyle(color: Colors.blue),
+              
             ),
           ],
         ),
