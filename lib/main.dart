@@ -13,12 +13,12 @@ class Lab5 extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Basic Flutter UI-02"),
+          backgroundColor: const Color.fromARGB(255, 36, 132, 210),
+          centerTitle: true,
         ),
         body: Text("Basic Flutter UI-02"),
         
-        style:TextStyle(
-          fontSize: 30,
-        ),
+        
       ),
 
 
